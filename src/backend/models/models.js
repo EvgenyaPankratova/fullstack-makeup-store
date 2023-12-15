@@ -75,7 +75,7 @@ Rating.belongsTo(Product)
 Product.hasMany(BasketProduct)
 BasketProduct.belongsTo(Product)
 
-Product.hasMany(ProductInfo)
+Product.hasMany(ProductInfo, {as: 'info'})
 ProductInfo.belongsTo(Product)
 
 //для создания связи многие ко многим нужна промежуточная таблица: какой тип принадлежит какому бренду, какой бренд принадлежит какому типу?
