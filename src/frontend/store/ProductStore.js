@@ -18,6 +18,10 @@ export default class ProductStore {
             {id: 5, name: "blush ultra", price: 400, rating: 4, img: 'https://static.beautytocare.com/media/catalog/product/s/e/sensilis-velvet-blush-01-romantic-prune-10g.jpg'},
             {id: 6, name: "superduper", price: 500, rating: 5, img: 'https://static.beautytocare.com/media/catalog/product/s/e/sensilis-velvet-blush-01-romantic-prune-10g.jpg'},
         ]
+
+        this._selectedType = {}
+        this._selectedBrand = {}
+
         makeAutoObservable(this)
     }
 
@@ -32,7 +36,13 @@ export default class ProductStore {
         this._products = products
     }
 
-   
+    setSelectedType(type){
+        this._selectedType = type
+    }
+
+    setSelectedBrand(brand){
+        this._selectedBrand = brand
+    }
 
     //вызываются, только если используемые переменные были изменены
     get types(){
@@ -46,5 +56,12 @@ export default class ProductStore {
         return this._products
     }
     
+    get selectedType(){
+        return this._selectedType
+    }
+
+    get selectedBrand(){
+        return this._selectedBrand
+    }
 
 }

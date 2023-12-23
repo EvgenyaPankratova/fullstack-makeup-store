@@ -1,0 +1,145 @@
+
+
+.card {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    font-size: 14px;
+
+  }
+  
+  /* При наведении на карточку - меняем цвет тени */
+  .card:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+  }
+  
+  .card_top {
+    flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+    position: relative;
+    overflow: hidden; /* Скрываем, что выходит за пределы */
+  }
+  
+  /* Контейнер для картинки */
+  .card_image {
+    display: block;
+    
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+    transition: 0.2s;
+  }
+  
+  /* При наведении - увеличиваем картинку */
+  .card_image:hover > img {
+    transform: scale(1.1);
+  }
+  
+  /* Размещаем скидку на товар относительно изображения */
+  .card_label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ff6633;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    z-index: 10;
+  }
+  
+  .card_bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+    padding: 1rem;
+    color: #606060;
+  }
+  
+  .card_price_block {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    color: #292827;
+    align-items: center;
+    
+  }
+  
+  .card_price::after {
+    content: "₽";
+    margin-left: 4px;
+    position: relative;
+  }
+
+  
+  .card_price {
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+  }
+  
+  .card_price--common::before {
+    content: "Обычная";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+
+  .card_rating{
+    display: flex;
+  }
+
+  .card_rating_star{
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.3rem;
+  }
+  
+  .card_title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #414141;
+  }
+  
+  .card_brand:hover {
+    color: #9c4d72;
+    cursor: pointer;
+  }
+
+  .card_type:hover {
+    color: #9c4d72;
+    cursor: pointer;
+  }
+  
+  .card_add {
+    display: block;
+    width: 100%;
+    color: #9c4d72;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 1px solid #9c4d72;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.2s;
+    margin-top: auto; /* Прижимаем кнопку к низу карточки */
+  }
+  
+  .card_add:hover {
+    border: 1px solid #292827;
+    background-color: #292827;
+    color: #fff;
+  }

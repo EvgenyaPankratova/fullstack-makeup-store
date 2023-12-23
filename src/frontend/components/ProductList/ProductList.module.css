@@ -1,0 +1,21 @@
+.productlist{
+    margin-left: 3rem;
+    border: 1px solid black;
+    width: 100%;
+    height:auto;
+    padding: 1rem;
+
+    
+   
+}
+
+.productlist_list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}

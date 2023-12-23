@@ -3,7 +3,7 @@ import { useContext } from "react";
 import styles from "./NavBar.module.css";
 
 import logo from "../../img/lolgo.png"
-import { SHOP_ROUTE } from "../../utils/consts";
+import { BRANDS_ROUTE, SHOP_ROUTE } from "../../utils/consts";
 import { observer } from "mobx-react";
 import { NavLink } from "react-router-dom";
 import { Context } from "../../..";
@@ -26,8 +26,8 @@ const NavBar = observer( () => {
                 </div>
 
                 <ul className={styles.navbar_list}>
-                    <li className={styles.navbar_list_item}><a href="#">Товары</a></li>
-                    <li className={styles.navbar_list_item}><a href="#">Бренды</a></li>
+                <NavLink to={SHOP_ROUTE}><li className={styles.navbar_list_item}>Товары</li></NavLink>
+                    <NavLink to={BRANDS_ROUTE}><li className={styles.navbar_list_item}>Бренды</li></NavLink>
                     <li className={styles.navbar_list_item}><a href="#">Отзывы</a></li>
                     <li className={styles.navbar_list_item}><a href="#">Контакты</a></li>
                 </ul>

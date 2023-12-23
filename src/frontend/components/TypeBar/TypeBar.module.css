@@ -1,0 +1,21 @@
+.typebar_title{
+    
+}
+
+.typebar_list{
+    text-align: left;
+}
+
+.typebar_list_item{
+    list-style-type: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.typebar_list_item_active{
+    list-style-type: none;
+    cursor: pointer;
+    color: palevioletred;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
