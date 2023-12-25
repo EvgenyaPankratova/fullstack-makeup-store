@@ -2,16 +2,20 @@ import styles from "./ProductItem.module.css";
 import { useContext } from "react";
 import { Context } from "../../..";
 import { observer } from "mobx-react-lite";
+import star from "../../img/star.png";
+import { useNavigate } from "react-router-dom";
+import { PRODUCT_ROUTE } from "../../utils/consts";
 
 const ProductItem = observer(({current_product}) => {
 
     const {product} = useContext(Context);
+    const navigate = useNavigate();
 
     return (
     <div className={styles.productitem}>
 
 
-<div className={styles.card}>
+<div className={styles.card} onClick={() => navigate(PRODUCT_ROUTE + '/' + current_product.id)}>
 
   <div className={styles.card_top}>
   
@@ -30,7 +34,7 @@ const ProductItem = observer(({current_product}) => {
 
     <div className={styles.card_price_block}>
       <div className={styles.card_price}>{current_product.price}</div>
-      <div className={styles.card_rating}>{current_product.rating}<img className={styles.card_rating_star} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Orange_star.svg/1200px-Orange_star.svg.png"></img></div>
+      <div className={styles.card_rating}>{current_product.rating}<img className={styles.card_rating_star} src={star}></img></div>
     </div>
 
     <div className={styles.card_type}>

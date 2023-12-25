@@ -18,19 +18,25 @@ const NavBar = observer( () => {
         
             <nav className={styles.navbar}>
 
-                <NavLink to={SHOP_ROUTE}><img className={styles.navbar_logo} src={logo} alt="logo"></img></NavLink>
+               
 
                 <div className={styles.navbar_name}>
+                <NavLink to={SHOP_ROUTE}><img className={styles.navbar_logo} src={logo} alt="logo"></img></NavLink>
+                    <div className={styles.navbar_name_text}>
                    <div>Космо</div>
-                   <div>Дива © </div>  
+                   <div>Дива © </div> 
+                   </div> 
                 </div>
 
+
+                <div>
                 <ul className={styles.navbar_list}>
                 <NavLink to={SHOP_ROUTE}><li className={styles.navbar_list_item}>Товары</li></NavLink>
                     <NavLink to={BRANDS_ROUTE}><li className={styles.navbar_list_item}>Бренды</li></NavLink>
                     <li className={styles.navbar_list_item}><a href="#">Отзывы</a></li>
                     <li className={styles.navbar_list_item}><a href="#">Контакты</a></li>
                 </ul>
+                </div>
 
                 {user.isAuth ? 
 
