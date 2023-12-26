@@ -5,6 +5,10 @@ import heart from "../../img/heart.svg";
 const ProductPage = () => {
 
     const product = {id: 1, name: "blush ultra", price: 500, rating: 5, img: 'https://static.beautytocare.com/media/catalog/product/s/e/sensilis-velvet-blush-01-romantic-prune-10g.jpg'}
+    const description = [{id: 1, title: 'Цвет', description: 'Чёрный' },
+    {id: 1, title: 'Объём/вес', description: '225 г' }
+
+]
 
     return (
     <div className={styles.product_page}>
@@ -29,10 +33,13 @@ const ProductPage = () => {
 
                     </div>
                 <div className={styles.product_page_description}>
-                    description
+                   
                     <ul>
-                        <li>Тип продукта: Румяна</li>
-                        <li>Бренд: Essence</li>
+                        <li>Тип продукта<span>Румяна</span></li>
+                        <li>Бренд<span>Essence</span></li>
+                        {description.map((info) => {
+                            return <li>{info.title}<span>{info.description}</span></li>
+                        })}
                     </ul>
                     
                 </div>

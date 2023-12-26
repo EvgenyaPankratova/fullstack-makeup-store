@@ -6,8 +6,9 @@
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
-    position: relative;
+    position: fixed;
     padding: 1.5rem 4rem;
+    z-index: 15;
     
   }
 
@@ -54,14 +55,13 @@
   }
 
   .navbar_auth{
-    /* position: absolute;
-    right: 2rem; */
+    
     padding: 0.5rem 1rem;
     background-color: rgb(237, 185, 185);
     border: none;
     cursor: pointer;
     font-size: 0.8rem;
-
+    margin-right: -12rem;
   }
 
   .navbar_auth_true{
@@ -71,8 +71,7 @@
   }
 
   .navbar_auth_admin{
-    /* position: absolute;
-    right: 10rem; */
+    
     padding: 0.5rem 1rem;
     background-color: rgb(237, 185, 185);
     border: none;
@@ -82,17 +81,27 @@
   }
 
   .navbar_auth_exit{
-    /* position: absolute;
-    right: 2rem; */
     padding: 0.5rem 1rem;
     background-color: rgb(237, 185, 185);
     border: none;
     cursor: pointer;
     font-size: 0.8rem;
+    margin-right: -12rem;
   }
 
   button:hover{
     background-color: rgb(242, 208, 233);
+  }
+
+  .navbar_basket_block{
+    width: 3rem;
+    cursor: pointer;
+  }
+
+  .navbar_basket{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
 
@@ -189,6 +198,10 @@
     }
   
   }
+
+
+
+
 
   @media (max-width: 499px) {
     .navbar {

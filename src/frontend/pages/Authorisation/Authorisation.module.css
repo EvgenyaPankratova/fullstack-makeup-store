@@ -5,15 +5,15 @@
     height: 18rem;
     background: #292827;
     padding: 1rem 2rem;
-    z-index: 5;
-    margin: 0 auto;
+    
     z-index: 90;
-    margin-top: 2rem;
     color: white;
+    position: absolute;
+    top: 20%;
+    left: 40%;
   }
   .modal_content {
     border: none;
-    position: relative;
     text-align: center;
     font-size: 1rem;
   }

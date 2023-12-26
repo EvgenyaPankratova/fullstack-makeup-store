@@ -1,0 +1,20 @@
+
+.admin_panel{
+    padding: 6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 26rem;
+    border: 1px solid red;
+}
+
+.admin_panel button{
+width: 100%;
+padding: 0.5rem 1rem;
+    background-color: rgb(237, 185, 185);
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}

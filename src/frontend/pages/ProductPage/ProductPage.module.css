@@ -1,5 +1,5 @@
 .product_page{
-    padding: 1.5rem 4rem;
+    padding: 6rem 4rem;
 }
 
 .product_page_main{
@@ -27,13 +27,54 @@
 
 .product_page_rating{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
+    font-size: 1.7rem;
 }
 
 .product_page_rating img{
     width: 2rem;
     height: auto;
 }
+
+.product_page_rating img:last-of-type{
+    margin-right: 0.5rem;
+}
+
+.product_page_description {
+    width: 20rem;
+}
+
+.product_page_description ul{
+    margin: 0;
+    width: 100%;
+}
+
+.product_page_description li{
+    display: flex; 
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+    color:#a9a6a4;
+}
+
+.product_page_description li::before{
+    content: ''; /* Выводим линию */
+    border-bottom: 1px dashed #ccc; /* Параметры линии */
+    margin: 0 5px; /* Расстояние от текста */
+    flex-grow: 1; /* Линия занимает всё доступное пространство */
+    order: 2;
+}
+
+.product_page_description span{
+    order: 3;
+    color: #292827;
+}
+
+
+
+
+
 
 .product_page_price_block{
     height: 14rem;

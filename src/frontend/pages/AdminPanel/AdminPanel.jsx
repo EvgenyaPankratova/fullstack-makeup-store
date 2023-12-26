@@ -4,7 +4,11 @@ const AdminPanel = () => {
 
     return (
     <div className={styles.admin_panel}>
-        AdminPanel
+        <h3>Панель админа</h3>
+        <button>Добавить товар</button>
+        <button>Удалить товар</button>
+        <button>Добавить тип</button>
+        <button>Добавить бренд</button>
     </div>
     )
 }
