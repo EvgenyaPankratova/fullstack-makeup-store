@@ -4,7 +4,7 @@ import styles from "./Authorisation.module.css";
 
 const Autorisation = () => {
 
-    const location = useLocation(); //хук useLocation соощбщит компоненту, что нужен перерендеринг, если путь поменялся
+    const location = useLocation(); //хук useLocation сообщит компоненту, что нужен перерендеринг, если путь поменялся
     const isLogin = location.pathname === LOGIN_ROUTE
 
     return (

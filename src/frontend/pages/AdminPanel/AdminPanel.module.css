@@ -5,14 +5,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 20%;
-    height: 26rem;
-    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+h3{
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .admin_panel button{
-width: 100%;
+width: 20%;
 padding: 0.5rem 1rem;
+margin-bottom: 0.5rem;
     background-color: rgb(237, 185, 185);
     border: none;
     cursor: pointer;
